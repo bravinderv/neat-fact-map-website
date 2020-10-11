@@ -195,9 +195,6 @@ function addFilmMarker(film, address, notes, lt, lg)
     cont = " Film/TV Show: <b>" + film + "</b> <br />" + 
     " Place: <i>" + address + "<\i> <br />" + 
     notes;
-    console.log(film);
-    console.log(address);
-    console.log(notes);
     console.log(cont)
     var marker = new google.maps.Marker({
         position:{lat: lt,lng: lg},
@@ -205,11 +202,13 @@ function addFilmMarker(film, address, notes, lt, lg)
         icon:'../dots/yellow-dot.png'
         //icon:'movie.jpg'
     });
-
+    console.log(1);
+    console.log(cont);
     var infoWindow = new google.maps.InfoWindow({
         content: cont 
 
     });
+    console.log(2);
 
     marker.addListener('click', function(){
         if(openInfoWindow)
