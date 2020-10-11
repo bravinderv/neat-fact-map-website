@@ -304,6 +304,9 @@ function createAllMarkers(entry, type)
             fil = entry[i][0];
             adrs = entry[i][1];
             nt = entry[i][2];
+            console.log(fil);
+            console.log(adrs);
+            console.log(nt);
             lt = entry[i][3];
             lg = entry[i][4];
             addFilmMarker(fil,adrs,nt,lt,lg);
