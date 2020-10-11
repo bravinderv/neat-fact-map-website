@@ -296,7 +296,6 @@ function createAllMarkers(entry, type)
     {
         if(type == "film")
         {
-            console.log(entry[i][0]);
             fil = entry[i][0];
             adrs = entry[i][1];
             nt = entry[i][2];
@@ -379,8 +378,6 @@ function createAllHistoryMarkers()
         lg = histEntry[i][4];
         addHistoryMarker(sta,title,nt,lt,lg);
     }
-    console.log("history markers:");
-    console.log(s);
 }
 
 function createAllGhostMarkers()
@@ -395,8 +392,6 @@ function createAllGhostMarkers()
         lg = gtEntry[i][3];
         addGhostTownMarker(title,nt,lt,lg);
     }
-    console.log("ghost town markers:");
-    console.log(s);
 }
 
 function createAllMurderMarkers()
@@ -416,8 +411,6 @@ function createAllMurderMarkers()
         lng = umEntry[i][9];
         addUnsolvedMarker(date,last,first,race,age,sex,city,state,lat,lng);
     }
-    console.log("murder markers:");
-    console.log(s);
 }
 
 function createAllHauntedMarkers()
@@ -433,8 +426,6 @@ function createAllHauntedMarkers()
         lng = hauEntry[i][5];
         addHauntedMarker(city, desc, loc, state, lat, lng);
     }
-    console.log("haunted markers:");
-    console.log(s);
 }
 
 function showAllFilmMarkers()
@@ -606,33 +597,24 @@ function main(){
     //createAllHauntedMarkers();
     
     reCenterButton.addEventListener('click', function(){
-        console.log(input.value);
         var address = input.value;
-        console.log(address);
         geocode(address);
     })
 
     fl.addEventListener('change', function(){
-        console.log(1);
         if(fl.checked){
-            console.log(2);
             if(flChecked == false)
             {
-                console.log(3);
                 createAllMarkers(flEntry,'film');
-                console.log(4);
                 flChecked == true;
             }
             else{
-                console.log(5);
                 showAllFilmMarkers();
             }    
         }
         else{
-            console.log(-1);
             if(openInfoWindow)
             {
-                console.log(-2);
                 openInfoWindow.close();
             }
             hideFilmMarkers();
