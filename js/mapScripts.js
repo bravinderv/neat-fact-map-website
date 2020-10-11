@@ -301,12 +301,11 @@ function createAllMarkers(entry, type)
     {
         if(type == "film")
         {
+            console.log(entry[i][0]);
             fil = entry[i][0];
+            console.log(fil)
             adrs = entry[i][1];
             nt = entry[i][2];
-            console.log(fil);
-            console.log(adrs);
-            console.log(nt);
             lt = entry[i][3];
             lg = entry[i][4];
             addFilmMarker(fil,adrs,nt,lt,lg);
@@ -620,19 +619,26 @@ function main(){
     })
 
     fl.addEventListener('change', function(){
+        console.log(1);
         if(fl.checked){
+            console.log(2);
             if(flChecked == false)
             {
+                console.log(3);
                 createAllMarkers(flEntry,'film');
+                console.log(4);
                 flChecked == true;
             }
             else{
+                console.log(5);
                 showAllFilmMarkers();
             }    
         }
         else{
+            console.log(-1);
             if(openInfoWindow)
             {
+                console.log(-2);
                 openInfoWindow.close();
             }
             hideFilmMarkers();
