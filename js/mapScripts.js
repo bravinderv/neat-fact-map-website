@@ -52,7 +52,6 @@ function activatePlacesSearch()
 function recenterMap(zoomNum, lt,long)
 {
     var coord = {lat: lt, lng:long};
-    console.log(coord);
     options = {
         zoom:zoomNum, 
         center:coord
@@ -195,20 +194,17 @@ function addFilmMarker(film, address, notes, lt, lg)
     cont = " Film/TV Show: <b>" + film + "</b> <br />" + 
     " Place: <i>" + address + "<\i> <br />" + 
     notes;
-    console.log(cont)
     var marker = new google.maps.Marker({
         position:{lat: lt,lng: lg},
         map:map,
         icon:'../dots/yellow-dot.png'
         //icon:'movie.jpg'
     });
-    console.log(1);
-    console.log(cont);
+    
     var infoWindow = new google.maps.InfoWindow({
         content: cont 
 
     });
-    console.log(2);
 
     marker.addListener('click', function(){
         if(openInfoWindow)
@@ -302,7 +298,6 @@ function createAllMarkers(entry, type)
         {
             console.log(entry[i][0]);
             fil = entry[i][0];
-            console.log(fil)
             adrs = entry[i][1];
             nt = entry[i][2];
             lt = entry[i][3];
