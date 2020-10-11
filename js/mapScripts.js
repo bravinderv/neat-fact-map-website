@@ -140,7 +140,7 @@ function addGhostTownMarker(title, notes, lt, lg)
     var marker = new google.maps.Marker({
         position:{lat: lt,lng: lg},
         map:map,
-        icon:'dots/orange-dot.png'
+        icon:'..dots/orange-dot.png'
     });
 
     var infoWindow = new google.maps.InfoWindow({
@@ -169,7 +169,7 @@ function addHistoryMarker(sta, title, notes, lt, lg)
     var marker = new google.maps.Marker({
         position:{lat: lt,lng: lg},
         map:map,
-        icon:'dots/ltblue-dot.png'
+        icon:'../dots/ltblue-dot.png'
     });
 
     var infoWindow = new google.maps.InfoWindow({
@@ -198,7 +198,7 @@ function addFilmMarker(film, address, notes, lt, lg)
     var marker = new google.maps.Marker({
         position:{lat: lt,lng: lg},
         map:map,
-        icon:'dots/yellow-dot.png'
+        icon:'../dots/yellow-dot.png'
         //icon:'movie.jpg'
     });
 
