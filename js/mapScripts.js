@@ -139,7 +139,7 @@ function addGhostTownMarker(title, notes, lt, lg)
     var marker = new google.maps.Marker({
         position:{lat: lt,lng: lg},
         map:map,
-        icon:'..dots/orange-dot.png'
+        icon:'../dots/orange-dot.png'
     });
 
     var infoWindow = new google.maps.InfoWindow({
